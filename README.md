@@ -10,7 +10,7 @@ npm or yarn
 Clone this repository on your computer:
 
 ```
-git clone https://github.com/your-username/memory-game.git
+git clone https://github.com/FacundoBettella/memory-game.git
 
 ```
 
