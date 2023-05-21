@@ -9,16 +9,16 @@ const MemoryGame = () => {
 
   return (
       <div
-        className="d-flex flex-column justify-content-center align-items-center m-2"
+        className="d-flex flex-column justify-content-center align-items-center"
         style={{ fontWeight: "700" }}
       >
-        <h1 className="text-center">Memory Game</h1>
+        <h1 className="text-center mb-3" style={{ color: "white" }}>Memory Game</h1>
         <CardsList cards={cards} />
         <button
           className="btn btn-primary d-flex justify-content-center align-items-center m-2"
           onClick={() => dispatch(resetCardState())}
         >
-          Reset
+          Reset & Shuffle
         </button>
       </div>
   )

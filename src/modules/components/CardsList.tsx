@@ -28,7 +28,7 @@ const CardsList = ({ cards = [] }: CardProps) => {
             dispatch(unFlipCard(card2.id));
             setCardsSelected([]);
             dispatch(gameResult());
-        }, 1000);
+        }, 300);
     }
 
     useEffect(() => {

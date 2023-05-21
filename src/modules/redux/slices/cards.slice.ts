@@ -67,12 +67,21 @@ export const cardsSlice = createSlice({
     },
 
     resetCardState(state: ICards) {
+
+      const shuffledCards = [...state.cards];
+      // Algoritmo de shuffle (mezcla)
+      for (let i = shuffledCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+      }
+      state.cards = shuffledCards;
+
       state.cards.forEach((card) => {
         card.state = false;
         card.selected = false;
       });
     },
-    
+
     gameResult: (state: ICards) => {
       state.gameResult = state.cards.every((card) => card.state);
     }    
