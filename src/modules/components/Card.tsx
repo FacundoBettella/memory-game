@@ -42,7 +42,7 @@ const Card = ({ id = "", title, image, state, selected, handleCard }: IProps) =>
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                border: "1px solid black",
+                                border: "2px solid #4b94ff",
                                 cursor: "pointer",
                                 flexWrap: "wrap",
                                 margin: "0 auto",
@@ -51,7 +51,7 @@ const Card = ({ id = "", title, image, state, selected, handleCard }: IProps) =>
                             : {
                                 width: "100px",
                                 height: "100px",
-                                border: "1px solid black",
+                                border: "2px solid #4b94ff",
                                 cursor: "none",
                                 borderRadius: "8px"
                             }
