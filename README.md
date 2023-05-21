@@ -41,7 +41,8 @@ Click on another card to try to find its match.
 If the cards match, they will stay face up and cannot be selected again.
 If the cards do not match, they will return to their original position and you must continue searching.
 The objective of the game is to find all pairs in the fewest number of moves possible.
-Technologies Used
+
+Technologies used:
 
 React
 Redux toolkit
