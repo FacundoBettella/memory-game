@@ -10,7 +10,7 @@ const initialState: ICards = {
   cards: [],
   hasError: false,
   isLoading: false,
-  gameResult: false
+  gameResult: false,
 };
 
 export const cardsSlice = createSlice({
@@ -63,16 +63,18 @@ export const cardsSlice = createSlice({
           state.cards[cardIndex1].state = false;
           state.cards[cardIndex2].state = false;
         }
-      }      
+      }
     },
 
     resetCardState(state: ICards) {
-
       const shuffledCards = [...state.cards];
       // Algoritmo de shuffle (mezcla)
       for (let i = shuffledCards.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+        [shuffledCards[i], shuffledCards[j]] = [
+          shuffledCards[j],
+          shuffledCards[i],
+        ];
       }
       state.cards = shuffledCards;
 
@@ -84,7 +86,7 @@ export const cardsSlice = createSlice({
 
     gameResult: (state: ICards) => {
       state.gameResult = state.cards.every((card) => card.state);
-    }    
+    },
   },
 });
 
@@ -96,7 +98,7 @@ export const {
   unFlipCard,
   checkCardsName,
   resetCardState,
-  gameResult
+  gameResult,
 } = cardsSlice.actions;
 
 export default cardsSlice.reducer;

@@ -8,20 +8,22 @@ const MemoryGame = () => {
   const dispatch = useDispatch();
 
   return (
-      <div
-        className="d-flex flex-column justify-content-center align-items-center"
-        style={{ fontWeight: "700" }}
+    <div
+      className="d-flex flex-column justify-content-center align-items-center"
+      style={{ fontWeight: "700" }}
+    >
+      <h1 className="text-center mb-3" style={{ color: "white" }}>
+        Memory Game
+      </h1>
+      <CardsList cards={cards} />
+      <button
+        className="btn btn-primary d-flex justify-content-center align-items-center m-4"
+        onClick={() => dispatch(resetCardState())}
       >
-        <h1 className="text-center mb-3" style={{ color: "white" }}>Memory Game</h1>
-        <CardsList cards={cards} />
-        <button
-          className="btn btn-primary d-flex justify-content-center align-items-center m-2"
-          onClick={() => dispatch(resetCardState())}
-        >
-          Reset & Shuffle
-        </button>
-      </div>
-  )
-}
+        Reset & Shuffle
+      </button>
+    </div>
+  );
+};
 
-export default MemoryGame
+export default MemoryGame;

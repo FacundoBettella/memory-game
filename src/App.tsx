@@ -14,6 +14,6 @@ const MemoryApp = () => {
       </BrowserRouter>
     </Layout>
   );
-}
+};
 
 export default MemoryApp;
