@@ -1,3 +1,4 @@
+import "./card.scss";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import {
@@ -42,10 +43,12 @@ const CardsList = ({ cards = [] }: CardProps) => {
   }, [cardsSelected]);
 
   return (
-    <div className="container-fluid">
-      <div className="row row-cols-2 row-cols-sm-4 row-cols-md-6 g-2">
+    <div className="custom-container">
+      <div className="custom-row">
         {cards.map((card, index) => (
-          <Card {...card} key={index} handleCard={handleClick} />
+          <div className="custom-col" key={index}>
+            <Card {...card} handleCard={handleClick} />
+          </div>
         ))}
       </div>
     </div>

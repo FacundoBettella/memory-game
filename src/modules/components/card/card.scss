@@ -15,13 +15,13 @@
 }
 
 .select-card {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-color: $check-color;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid $check-color;
+  border: 10px solid $check-color;
   flex-wrap: wrap;
   margin: 0 auto;
   border-radius: 8px;
@@ -41,4 +41,30 @@
   height: 100%;
   border: 2px solid $text-color;
   border-radius: 4px;
+}
+
+.custom-container {
+  width: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.custom-col {
+  flex: 0 0 auto;
+  width: calc(50% - 2rem); // Para dispositivos de tamaño pequeño (sm)
+  @media (min-width: 576px) {
+    width: calc(25% - 2rem); // Para dispositivos de tamaño mediano (md)
+  }
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }

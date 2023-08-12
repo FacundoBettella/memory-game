@@ -1,5 +1,4 @@
 import "./index.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "intersection-observer";
 import ReactDOM from "react-dom/client";
 import MemoryApp from "./App";

@@ -44,7 +44,7 @@ const Card = ({
               <img src={image && image} className="img" alt={title} />
             </div>
           ) : (
-            <strong style={{ color: "white" }}>?</strong>
+            <strong style={{ color: "white" }}>X</strong>
           )}
         </div>
       )}

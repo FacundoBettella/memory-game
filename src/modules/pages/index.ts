@@ -1,5 +1,5 @@
 import Landing from "./landing/Landing";
-import MemoryGame from "./MemoryGame";
-import Results from "./Results";
+import MemoryGame from "./game/MemoryGame";
+import Results from "./result/Results";
 
 export { Landing, MemoryGame, Results };
