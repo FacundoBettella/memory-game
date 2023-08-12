@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { CardsList } from "../components";
+import { Button, CardsList } from "../components";
 import { resetCardState } from "../redux/slices/cards.slice";
 
 const MemoryGame = () => {
@@ -16,12 +16,12 @@ const MemoryGame = () => {
         Memory Game
       </h1>
       <CardsList cards={cards} />
-      <button
-        className="btn btn-primary d-flex justify-content-center align-items-center m-4"
+
+      <Button
+        color="primary"
+        text="Suffle"
         onClick={() => dispatch(resetCardState())}
-      >
-        Reset & Shuffle
-      </button>
+      />
     </div>
   );
 };

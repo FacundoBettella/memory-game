@@ -1,17 +1,16 @@
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'intersection-observer';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import MemoryApp from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "intersection-observer";
+import ReactDOM from "react-dom/client";
+import MemoryApp from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
-import { store, persistor } from './store/store';
+import { store, persistor } from "./store/store";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 root.render(

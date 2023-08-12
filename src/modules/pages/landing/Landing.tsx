@@ -1,10 +1,11 @@
+import "./landing.scss";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-import { fetchCards } from "../redux/slices/cards.slice";
-import { RootState } from "../../store/store";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { fetchCards } from "../../redux/slices/cards.slice";
+import { RootState } from "../../../store/store";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../../components";
 
 const Landing = () => {
   const [username, setUsername] = useState<string>("");
@@ -31,37 +32,30 @@ const Landing = () => {
   }, []);
 
   return (
-    <>
+    <div className="container-landing">
       {isLoading ? (
-        <h2 style={{ color: "white" }}>Loading game..</h2>
+        <h2 className="title">Wait..</h2>
       ) : (
-        <div className="container py-5">
-          <h1 className="text-center mb-4" style={{ color: "white" }}>
-            Memory Card Game
-          </h1>
-          <div className="card p-3 mx-auto" style={{ maxWidth: "400px" }}>
+        <>
+          <h2 className="title">Memory Card Game</h2>
+          <div className="card-landing">
             {item !== "" ? (
               <>
-                <h4 className="text-center mb-4" style={{ color: "#366cbb" }}>
-                  Welcome {item}
-                </h4>
-                <div className="d-grid">
-                  <button
-                    className="btn btn-primary"
+                <h4 className="username-title">Welcome {item}</h4>
+                <div className="">
+                  <Button
+                    color="primary"
+                    text="¡Let's play!"
                     type="submit"
                     onClick={() => navigate("/memory-game")}
-                  >
-                    ¡Let's play!
-                  </button>
+                  />
                 </div>
               </>
             ) : (
               <>
-                <h2 className="text-center mb-2" style={{ color: "#3c74c7" }}>
-                  Introduce your name
-                </h2>
+                <h2 className="username-title">Introduce your name</h2>
                 <form>
-                  <div className="mb-3">
+                  <div className="username-input">
                     <input
                       required
                       type="text"
@@ -72,9 +66,9 @@ const Landing = () => {
                       onChange={handleUsername}
                     />
                   </div>
-                  <div className="d-grid">
+                  <div className="">
                     <button
-                      className="btn btn-primary"
+                      className="submit-button"
                       type="submit"
                       onClick={handleSubmit}
                     >
@@ -85,9 +79,9 @@ const Landing = () => {
               </>
             )}
           </div>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 export default Landing;

@@ -1,21 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import createSagaMiddleware from "redux-saga";
-
-// import cardReducer from "../modules/redux/slices/cards.slice";
-// import cardsSaga from "../modules/redux/sagas/cards.saga";
-
-// const sagaMiddleware = createSagaMiddleware();
-
-// export const store = configureStore({
-//   reducer: {
-//     cards: cardReducer,
-//   },
-//   middleware: [sagaMiddleware],
-// });
-
-// sagaMiddleware.run(cardsSaga);
-// export type RootState = ReturnType<typeof store.getState>;
-
 import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import createSagaMiddleware from "redux-saga";

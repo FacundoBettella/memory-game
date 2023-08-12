@@ -3,10 +3,12 @@
 This project is a memory game in which a series of cards are displayed face down, and the player must click on them to find pairs of cards that have the same value. The objective of the game is to find all pairs in the fewest number of moves possible.
 
 # Requirements
+
 Node.js (version 14 or higher)
 npm or yarn
 
 # Installation
+
 Clone this repository on your computer:
 
 ```
@@ -18,8 +20,6 @@ Install the project dependencies:
 
 ```
 npm install
-or
-yarn install
 
 ```
 
@@ -27,8 +27,6 @@ yarn install
 
 ```
 npm start
-or
-yarn start
 
 ```
 
@@ -47,7 +45,6 @@ Technologies used:
 React
 Redux toolkit
 Redux persist
-Bootstrap
 Axios
-React Router
-
+SASS
+Bootstrap

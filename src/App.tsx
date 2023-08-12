@@ -1,8 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
-
-import { Layout } from "./Layout";
-import { BodyComponent } from "./modules/components";
 import { initAxios } from "./config/AxiosConfig";
+import { BrowserRouter } from "react-router-dom";
+import { Layout, BodyComponent } from "./modules/components";
 
 const MemoryApp = () => {
   initAxios();

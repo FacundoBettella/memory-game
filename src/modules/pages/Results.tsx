@@ -2,7 +2,8 @@ import React from "react";
 import { resetCardState } from "../redux/slices/cards.slice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { Button } from "../components";
 
 const Results = () => {
   const dispatch = useDispatch();
@@ -20,9 +21,7 @@ const Results = () => {
           <h1 className="text-center mb-4" style={{ color: "white" }}>
             You win!
           </h1>
-          <Button variant="primary" onClick={handleClick} className="w-100">
-            Play again
-          </Button>
+          <Button color="primary" text="Play again" onClick={handleClick} />
         </Col>
       </Row>
     </Container>
